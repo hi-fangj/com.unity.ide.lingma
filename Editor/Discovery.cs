@@ -13,7 +13,7 @@ namespace Microsoft.Unity.VisualStudio.Editor
 	{
 		public static IEnumerable<IVisualStudioInstallation> GetVisualStudioInstallations()
 		{
-			foreach (var installation in VisualStudioTraeInstallation.GetVisualStudioInstallations())
+			foreach (var installation in VisualStudioLingmaInstallation.GetVisualStudioInstallations())
 				yield return installation;
 			foreach (var installation in VisualStudioCodiumInstallation.GetVisualStudioInstallations())
 				yield return installation;
@@ -23,7 +23,7 @@ namespace Microsoft.Unity.VisualStudio.Editor
 		{
 			try
 			{
-				if (VisualStudioTraeInstallation.TryDiscoverInstallation(editorPath, out installation))
+				if (VisualStudioLingmaInstallation.TryDiscoverInstallation(editorPath, out installation))
 					return true;
 				if (VisualStudioCodiumInstallation.TryDiscoverInstallation(editorPath, out installation))
 					return true;
@@ -38,8 +38,8 @@ namespace Microsoft.Unity.VisualStudio.Editor
 
 		public static void Initialize()
 		{
-            VisualStudioTraeInstallation.Initialize();
-            VisualStudioCodiumInstallation.Initialize();
+			VisualStudioLingmaInstallation.Initialize();
+			VisualStudioCodiumInstallation.Initialize();
 		}
 	}
 }

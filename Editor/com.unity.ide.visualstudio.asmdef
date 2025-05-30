@@ -1,5 +1,5 @@
 {
-    "name": "Unity.Trae.Editor",
+    "name": "Unity.Lingma.Editor",
     "references": [],
     "includePlatforms": [
         "Editor"
