@@ -115,7 +115,7 @@ namespace Microsoft.Unity.VisualStudio.Editor {
 			isPrerelease = isPrerelease || editorPath.ToLower().Contains("insider");
 			installation = new VisualStudioLingmaInstallation() {
 				IsPrerelease = isPrerelease,
-				Name = "Lingma" + (isPrerelease ? " - Insider" : string.Empty) + (version != null ? $" [{version.ToString(3)}]" : string.Empty),
+				Name = "Qoder" + (isPrerelease ? " - Insider" : string.Empty) + (version != null ? $" [{version.ToString(3)}]" : string.Empty),
 				Path = editorPath,
 				Version = version ?? new Version()
 			};
@@ -131,16 +131,16 @@ namespace Microsoft.Unity.VisualStudio.Editor {
 			var programFiles = IOPath.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));
 
 			foreach (var basePath in new[] { localAppPath, programFiles }) {
-				candidates.Add(IOPath.Combine(basePath, "Lingma", "Lingma.exe"));
+				candidates.Add(IOPath.Combine(basePath, "Qoder", "Lingma.exe"));
 			}
 #elif UNITY_EDITOR_OSX
 			var appPath = IOPath.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));
 			candidates.AddRange(Directory.EnumerateDirectories(appPath, "Lingma*.app"));
 #elif UNITY_EDITOR_LINUX
 			// Well known locations
-			candidates.Add("/usr/bin/lingma");
-			candidates.Add("/bin/lingma");
-			candidates.Add("/usr/local/bin/lingma");
+			candidates.Add("/usr/bin/qoder");
+			candidates.Add("/bin/qoder");
+			candidates.Add("/usr/local/bin/qoder");
 
 			// Preference ordered base directories relative to which desktop files should be searched
 			candidates.AddRange(GetXdgCandidates());
