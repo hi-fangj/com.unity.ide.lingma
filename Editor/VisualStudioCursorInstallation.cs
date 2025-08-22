@@ -57,11 +57,11 @@ namespace Microsoft.Unity.VisualStudio.Editor {
 
 		private static bool IsCandidateForDiscovery(string path) {
 #if UNITY_EDITOR_OSX
-			return Directory.Exists(path) && Regex.IsMatch(path, ".*Lingma.*.app$", RegexOptions.IgnoreCase);
+			return Directory.Exists(path) && Regex.IsMatch(path, ".*Qoder.*.app$", RegexOptions.IgnoreCase);
 #elif UNITY_EDITOR_WIN
-			return File.Exists(path) && Regex.IsMatch(path, ".*Lingma.*.exe$", RegexOptions.IgnoreCase);
+			return File.Exists(path) && Regex.IsMatch(path, ".*Qoder.*.exe$", RegexOptions.IgnoreCase);
 #else
-			return File.Exists(path) && path.EndsWith("Lingma", StringComparison.OrdinalIgnoreCase);
+			return File.Exists(path) && path.EndsWith("Qoder", StringComparison.OrdinalIgnoreCase);
 #endif
 		}
 
