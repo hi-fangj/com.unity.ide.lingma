@@ -1,7 +1,7 @@
 {
-  "name": "com.unity.ide.lingma",
-  "displayName": "Lingma Editor",
-  "description": "Lingma editor integration for supporting Lingma as code editor for unity. Adds support for generating csproj files for intellisense purposes, auto discovery of installations, etc.",
+  "name": "com.unity.ide.qoder",
+  "displayName": "Qoder Editor",
+  "description": "Qoder editor integration for supporting Lingma as code editor for unity. Adds support for generating csproj files for intellisense purposes, auto discovery of installations, etc.",
   "version": "1.0.0",
   "unity": "2019.4",
   "unityRelease": "25f1",
@@ -9,6 +9,6 @@
     "com.unity.test-framework": "1.1.9"
   },
   "_upm": {
-    "changelog": "Integration:\n\n- Add support for Lingma"
+    "changelog": "Integration:\n\n- Add support for Qoder"
   }
 }
