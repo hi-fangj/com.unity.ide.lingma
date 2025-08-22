@@ -131,11 +131,11 @@ namespace Microsoft.Unity.VisualStudio.Editor {
 			var programFiles = IOPath.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));
 
 			foreach (var basePath in new[] { localAppPath, programFiles }) {
-				candidates.Add(IOPath.Combine(basePath, "Qoder", "Lingma.exe"));
+				candidates.Add(IOPath.Combine(basePath, "Qoder", "Qoder.exe"));
 			}
 #elif UNITY_EDITOR_OSX
 			var appPath = IOPath.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));
-			candidates.AddRange(Directory.EnumerateDirectories(appPath, "Lingma*.app"));
+			candidates.AddRange(Directory.EnumerateDirectories(appPath, "Qoder*.app"));
 #elif UNITY_EDITOR_LINUX
 			// Well known locations
 			candidates.Add("/usr/bin/qoder");
